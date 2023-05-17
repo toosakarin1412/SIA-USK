@@ -84,6 +84,7 @@ Route::middleware('auth')->group(function () {
         })->name('dashboardAdmin');
 
         Route::get('/admin/matakuliah', [MataKuliahController::class, 'adminMK'])->name('admin.mk');
+        Route::post('/mk/add', [MataKuliahController::class, 'addMK'])->name('mk.add');
     });
 });
 

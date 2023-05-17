@@ -62,6 +62,7 @@
             <div class="px-6 py-6 lg:px-8">
                 <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h3>
                 <form class="space-y-6" action="/mk/add" method="post">
+                    @csrf
                     <div>
                         <label for="kodemk" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">KodeMK</label>
                         <input type="text" name="kodemk" id="kodemk" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
@@ -79,8 +80,8 @@
                         <input type="text" name="kelas" id="kelas"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
                     </div>
                     <div>
-                        <label for="pengejar" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pengajar</label>
-                        <input type="text" name="pengejar" id="pengejar"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                        <label for="pengajar" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pengajar</label>
+                        <input type="text" name="pengajar" id="pengajar"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
                     </div>
                     <div>
                         <label for="ruang" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Ruang</label>

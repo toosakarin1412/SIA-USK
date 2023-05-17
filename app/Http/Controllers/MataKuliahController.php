@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreMataKuliahRequest;
 use App\Http\Requests\UpdateMataKuliahRequest;
+use Illuminate\Http\Request;
 use App\Models\MataKuliah;
 
 class MataKuliahController extends Controller
@@ -21,9 +22,18 @@ class MataKuliahController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function addMK(Request $request)
     {
-        //
+        MataKuliah::create([
+            'kodemk' => $request->kodemk,
+            'namamk' => $request->namamk,
+            'sks' => $request->sks,
+            'kelas' => $request->kelas,
+            'pengajar' => $request->pengajar,
+            'ruang' => $request->ruang,
+        ]);
+
+        return redirect()->back();
     }
 
     /**
