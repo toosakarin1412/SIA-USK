@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('npm')->unique();
             $table->string('name');
             $table->string('email');
+            $table->enum('level', ['admin', 'mahasiswa', 'dosen'])->default('mahasiswa');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

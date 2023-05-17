@@ -50,12 +50,12 @@
                     Login
                 </button>
                 <hr class="h-px w-full bg-gray-300 border-0" />
-                <div>
+                <!-- <div>
                     <button
                         class="bg-emerald-200 hover:bg-emerald-400 py-2 px-4 rounded-md opacity-75 font-bold md:w-[22.5rem] w-[19.5rem]">
                         Sigle Sign On
                     </button>
-                </div>
+                </div> -->
             </div>
             <p class="text-center font-medium text-base text-black">
                 &#169; Meone & toosakarin

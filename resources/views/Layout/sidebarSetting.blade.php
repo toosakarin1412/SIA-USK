@@ -51,7 +51,7 @@
                     </a>
                 </button>
                 <button class="hover:bg-emerald-600 text-left rounded-md p-2">
-                    <a href="{{ route('login') }}">
+                    <a href="{{ route('Logout') }}">
                         Logout
                     </a>
                 </button>
