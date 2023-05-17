@@ -41,37 +41,37 @@
                     </a>
                 </button>
                 <button class="hover:bg-emerald-600 text-left rounded-md p-2">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('isi-krs') }}">
                         Isi KRS
                     </a>
                 </button>
                 <button class="hover:bg-emerald-600 text-left rounded-md p-2">
-                    <a href="{{ route('simkuliah') }}">
+                    <a href="{{ route('pkrs') }}">
                         PKRS
                     </a>
                 </button>
                 <button class="hover:bg-emerald-600 text-left rounded-md p-2">
-                    <a href="{{ route('simkuliah') }}">
+                    <a href="{{ route('khs') }}">
                         KHS
                     </a>
                 </button>
                 <button class="hover:bg-emerald-600 text-left rounded-md p-2">
-                    <a href="{{ route('biodata') }}">
+                    <a href="{{ route('mata-kuliah') }}">
                         Mata Kuliah
                     </a>
                 </button>
                 <button class="hover:bg-emerald-600 text-left rounded-md p-2">
-                    <a href="{{ route('login') }}">
+                    <a href="{{ route('transkrip') }}">
                         Transkrip
                     </a>
                 </button>
                 <button class="hover:bg-emerald-600 text-left rounded-md p-2">
-                    <a href="{{ route('login') }}">
+                    <a href="{{ route('ijazah') }}">
                         Ijazah
                     </a>
                 </button>
                 <button class="hover:bg-emerald-600 text-left rounded-md p-2">
-                    <a href="{{ route('login') }}">
+                    <a href="{{ route('histori-nilai') }}">
                         Histori Nilai
                     </a>
                 </button>
