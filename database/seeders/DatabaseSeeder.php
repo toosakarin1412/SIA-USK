@@ -16,12 +16,29 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
         User::create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+            'name' => 'Mahasiswa',
+            'email' => 'mhs@siau.com',
             'npm' => "2108107010031",
+            'level' => 'mahasiswa',
             'password' => bcrypt("12345678"),
         ]);
 
+        User::create([
+            'name' => 'Admin',
+            'email' => 'admin@siau.com',
+            'npm' => "1234",
+            'level' => 'admin',
+            'password' => bcrypt("12345678"),
+        ]);
 
+        User::create([
+            'name' => 'Dosen',
+            'email' => 'dosen@siau.com',
+            'npm' => "7890",
+            'level' => 'dosen',
+            'password' => bcrypt("12345678"),
+        ]);
+
+        $this->call(MataKuliahSeeder::class);
     }
 }

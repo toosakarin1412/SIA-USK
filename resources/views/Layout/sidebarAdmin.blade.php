@@ -25,31 +25,16 @@
             </div>
         </div>
         <hr class="mx-3" />
-        <div class="flex gap-x-6 p-2 pt-5 items-center justify-start">
-            <div class="flex gap-x-4 items-center p-3">
-                <img src="{{ asset('UserProfile.jpg') }}" class="sticky cursor-pointer rounded-full w-10 h-10" />
-                <div>
-                    <h1 class="text-center font-medium text-sm duration-500">
-                        Meone
-                    </h1>
-                </div>
-            </div>
-        </div>
         <div class="mt-4 flex flex-col gap-4 relative">
             <div class="flex flex-col text-sm gap-4 font-medium p-2 rounded-md mx-5">
                 <button class="hover:bg-emerald-600 text-left rounded-md p-2">
-                    <a href="{{ route('biodata') }}">
-                        Biodata
+                    <a href="{{ route('dashboardAdmin') }}">
+                        Dashboard
                     </a>
                 </button>
                 <button class="hover:bg-emerald-600 text-left rounded-md p-2">
-                    <a href="{{ route('security') }}">
-                        Security Sign In
-                    </a>
-                </button>
-                <button class="hover:bg-emerald-600 text-left rounded-md p-2">
-                    <a href="{{ route('dashboard') }}">
-                        Back to Dashboard
+                    <a href="{{ route('admin.mk') }}">
+                        Mata Kuliah
                     </a>
                 </button>
                 <button class="hover:bg-emerald-600 text-left rounded-md p-2">
@@ -60,8 +45,9 @@
             </div>
         </div>
     </div>
-    @yield('contentSetting')
+    @yield('content')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+
 </body>
 
 </html>

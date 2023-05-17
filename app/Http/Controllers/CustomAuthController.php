@@ -22,7 +22,13 @@ class CustomAuthController extends Controller
    
         $credentials = $request->only('npm', 'password');
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('/dashboard')->withSuccess('Signed in');
+            if(Auth::user()->level == "admin"){
+                return redirect()->intended('/admin')->withSuccess('Signed in');
+            }elseif(Auth::user()->level == "dosen"){
+                return redirect()->intended('/dosen')->withSuccess('Signed in');
+            }else{
+                return redirect()->intended('/dashboard')->withSuccess('Signed in');
+            }
         }
   
         return redirect("/")->withSuccess('Login details are not valid');
