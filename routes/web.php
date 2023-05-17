@@ -85,8 +85,6 @@ Route::middleware('auth')->group(function () {
         Route::get('/admin/matakuliah', function () {
             return view('adminmatakuliah');
         })->name('admin.mk');
-
-
     });
 });
 
