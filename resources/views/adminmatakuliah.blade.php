@@ -2,10 +2,10 @@
 
 @section('content')
 <div>
-    <div class="w-full bg-red-100 mx-6 mt-20">
+    <div class="w-full mx-6 mt-20">
         <!-- Modal toggle -->
         <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
-        Toggle modal
+        Tambah MK
         </button>
     </div>
     <div class="flex h-full w-screen p-6 flex-col gap-10 items-end">
@@ -34,14 +34,16 @@
                     </tr>
                 </thead>
                 <tbody class="w-fit md:w-full text-center text-xs md:text-lg">
+                    @foreach($data as $item)
                     <tr>
-                        <td class="px-6 py-3">{row.Kode}</td>
-                        <td class="px-6 py-3">{row.MataKuliah}</td>
-                        <td class="px-6 py-3">{row.SKS}</td>
-                        <td class="px-6 py-3">{row.Kelas}</td>
-                        <td class="px-6 py-3">{row.Pengajar}</td>
-                        <td class="px-6 py-3">{row.Ruang}</td>
+                        <td class="px-6 py-3">{{ $item->kodemk }}</td>
+                        <td class="px-6 py-3">{{ $item->namamk }}</td>
+                        <td class="px-6 py-3">{{ $item->sks }}</td>
+                        <td class="px-6 py-3">{{ $item->kelas }}</td>
+                        <td class="px-6 py-3">{{ $item->pengajar }}</td>
+                        <td class="px-6 py-3">{{ $item->ruang }}</td>
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
         </form>

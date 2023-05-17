@@ -1,7 +1,6 @@
 @extends('Layout.sidebarKRS')
 
 @section('contentKRS')
-    <div class="w-full">.</div>
     <div class="flex h-full w-screen p-6 flex-col gap-10 items-end">
         <form class="bg-gray-200 rounded-lg shadow-lg p-5 overflow-x-scroll w-full md:overflow-x-visible">
             <table class="table-fixed w-full">

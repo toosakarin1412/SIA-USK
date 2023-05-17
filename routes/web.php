@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomAuthController;
+use App\Http\Controllers\MataKuliahController;
 
 /*
 |--------------------------------------------------------------------------
@@ -82,9 +83,7 @@ Route::middleware('auth')->group(function () {
             return view('dashboardAdmin');
         })->name('dashboardAdmin');
 
-        Route::get('/admin/matakuliah', function () {
-            return view('adminmatakuliah');
-        })->name('admin.mk');
+        Route::get('/admin/matakuliah', [MataKuliahController::class, 'adminMK'])->name('admin.mk');
     });
 });
 

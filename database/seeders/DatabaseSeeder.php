@@ -38,5 +38,7 @@ class DatabaseSeeder extends Seeder
             'level' => 'dosen',
             'password' => bcrypt("12345678"),
         ]);
+
+        $this->call(MataKuliahSeeder::class);
     }
 }
