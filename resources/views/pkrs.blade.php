@@ -1,13 +1,13 @@
-@extends('Layout.sidebar')
+@extends('Layout.sidebarKRS')
 
-@section('content')
+@section('contentKRS')
     <div class="flex h-screen w-screen p-6 flex-col gap-10">
         <div class="flex items-center bg-gray-200 h-fit w-full p-5 rounded-lg shadow-lg justify-between">
             <h1 class=" text-base font-bold">
-                Jadwal Kuliah Hari Ini
+                Perubahan Mata Kuliah
             </h1>
             <div class="flex items-center bg-emerald-300 w-32 justify-center h-10 rounded-lg">
-                {{-- <BiRefresh size={20} /> --}}
+                <BiRefresh size={20} />
                 <button class="text-base font-bold text-center">
                     Refresh
                 </button>
@@ -36,12 +36,11 @@
                             Ruang
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Absensi
+                            Batalkan
                         </th>
                     </tr>
                 </thead>
                 <tbody class="w-fit md:w-full text-center text-xs md:text-lg">
-
                     <tr>
                         <td class="px-6 py-3">{row.Kode}</td>
                         <td class="px-6 py-3">
@@ -53,10 +52,12 @@
                             {row.Pengajar}
                         </td>
                         <td class="px-6 py-3">{row.Ruang}</td>
-                        <td class="px-6 py-3"><button
+                        <td class="px-6 py-3">
+                            <button
                                 class="text-base font-bold text-center bg-emerald-300 hover:bg-emerald-200 w-28 h-10 rounded-lg">
-                                Absen
-                            </button></td>
+                                Batal
+                            </button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
