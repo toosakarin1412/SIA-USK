@@ -12,7 +12,8 @@
 <body
     class="h-screen w-screen bg-emerald-400 flex items-center justify-center md:flex md:items-center md:justify-center">
 
-    <form class="h-auto flex flex-col items-center justify-center md:flex md:flex-row md:gap-10" method="post">
+    <form class="h-auto flex flex-col items-center justify-center md:flex md:flex-row md:gap-10" method="post" action="{{route('Login')}}">
+        @csrf
         <div class="w-auto bg-emerald-400 mb-32 md:relative md:bottom-[2rem]">
             <p class="text-2xl font-extrabold md:text-4xl md:text-left text-center">
                 SIA - USK
@@ -33,7 +34,7 @@
                         <HiOutlineUser size={20} />
                     </div>
                     <input type="text" placeholder="Username"
-                        class="bg-white opacity-75 rounded-r-md md:w-[20rem] w-[17rem]" name="username" />
+                        class="bg-white opacity-75 rounded-r-md md:w-[20rem] w-[17rem]" name="npm" />
                 </div>
                 <div class="flex items-center">
                     <div class="bg-gray-400 h-12 w-10 rounded-l-md flex items-center justify-center">
@@ -44,9 +45,7 @@
                 </div>
             </div>
             <div class="flex flex-col gap-2 mt-4 md:flex md:items-center">
-                <Link href="">
-                </Link>
-                <button
+                <button type="submit"
                     class="bg-emerald-200 hover:bg-emerald-400 py-2 px-4 rounded-md opacity-75 font-bold md:w-[22.5rem] w-[19.5rem]">
                     Login
                 </button>
