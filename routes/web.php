@@ -78,6 +78,14 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::middleware('CheckRole:admin')->group(function () {
+        Route::get('/admin', function () {
+            return view('dashboardAdmin');
+        })->name('dashboardAdmin');
+
+        Route::get('/admin/matakuliah', function () {
+            return view('adminmatakuliah');
+        })->name('admin.mk');
+
 
     });
 });
