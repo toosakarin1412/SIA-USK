@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
             'npm' => "2108107010031",
             'level' => 'mahasiswa',
             'password' => bcrypt("12345678"),
+            'id_dosen_wali' => '7890'
         ]);
 
         User::create([

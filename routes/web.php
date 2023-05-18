@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\MataKuliahController;
+use App\Http\Controllers\KRSController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,21 +46,15 @@ Route::middleware('auth')->group(function () {
             return view('dashboardKrs');
         })->name('dashboard-krs');
         
-        Route::get('/isi-krs', function () {
-            return view('isikrs');
-        })->name('isi-krs');
+        Route::get('/isi-krs', [KRSController::class, 'isiKRS'])->name('isi-krs');
+        Route::post('/krs/add', [KRSController::class, 'addKRS'])->name('krs.add');
         
-        Route::get('/pkrs', function () {
-            return view('pkrs');
-        })->name('pkrs');
+        Route::get('/pkrs', [KRSController::class, 'pkrs'])->name('pkrs');
+        Route::post('/pkrs/delete/', [KRSController::class, 'deleteKRS'])->name('pkrs.delete');
         
-        Route::get('/khs', function () {
-            return view('khs');
-        })->name('khs');
+        Route::get('/khs', [KRSController::class, 'khs'])->name('khs');
         
-        Route::get('/mata-kuliah', function () {
-            return view('matakuliah');
-        })->name('mata-kuliah');
+        Route::get('/mata-kuliah', [KRSController::class, 'matakuliah'])->name('mata-kuliah');
         
         Route::get('/transkrip', function () {
             return view('transkrip');
@@ -75,7 +70,9 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::middleware('CheckRole:dosen')->group(function () {
-
+        Route::get('/dosen', function () {
+            return view('dashboardDosen');
+        })->name('dashboardDosen');
     });
 
     Route::middleware('CheckRole:admin')->group(function () {

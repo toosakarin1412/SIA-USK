@@ -27,18 +27,16 @@
                     </tr>
                 </thead>
                 <tbody class="w-fit md:w-full text-center text-xs md:text-lg">
+                @foreach($data as $item)
                     <tr>
-                        <td class="px-6 py-3">{row.Kode}</td>
-                        <td class="px-6 py-3">
-                            {row.MataKuliah}
-                        </td>
-                        <td class="px-6 py-3">{row.SKS}</td>
-                        <td class="px-6 py-3">{row.Kelas}</td>
-                        <td class="px-6 py-3">
-                            {row.Pengajar}
-                        </td>
-                        <td class="px-6 py-3">{row.Ruang}</td>
+                        <td class="px-6 py-3">{{$item->kodemk}}</td>
+                        <td class="px-6 py-3">{{$item->namamk}}</td>
+                        <td class="px-6 py-3">{{$item->sks}}</td>
+                        <td class="px-6 py-3">{{$item->kelas}}</td>
+                        <td class="px-6 py-3">{{$item->pengajar}}</td>
+                        <td class="px-6 py-3">{{$item->ruang}}</td>
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
         </form>
