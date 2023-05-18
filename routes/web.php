@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\MataKuliahController;
+use App\Http\Controllers\KRSController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,9 +46,8 @@ Route::middleware('auth')->group(function () {
             return view('dashboardKrs');
         })->name('dashboard-krs');
         
-        Route::get('/isi-krs', function () {
-            return view('isikrs');
-        })->name('isi-krs');
+        Route::get('/isi-krs', [KRSController::class, 'isiKRS'])->name('isi-krs');
+        Route::post('/krs/add', [KRSController::class, 'addKRS'])->name('krs.add');
         
         Route::get('/pkrs', function () {
             return view('pkrs');
