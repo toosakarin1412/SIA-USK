@@ -20,9 +20,6 @@
                 <thead class="w-fit md:w-full">
                     <tr class="bg-emerald-300">
                         <th scope="col" class="px-6 py-3">
-                            No
-                        </th>
-                        <th scope="col" class="px-6 py-3">
                             Kode
                         </th>
                         <th scope="col" class="px-6 py-3 whitespace-nowrap">
@@ -40,16 +37,15 @@
                     </tr>
                 </thead>
                 <tbody class="w-fit md:w-full text-center text-sm">
+                    @foreach($data as $item)
                     <tr>
-                        <td class="px-6 py-3">1</td>
-                        <td class="px-6 py-3">INF206</td>
-                        <td class="px-6 py-3">
-                            Rekayasa Perangkat Lunak
-                        </td>
-                        <td class="px-6 py-3">3</td>
-                        <td class="px-6 py-3">AB</td>
-                        <td class="px-6 py-3">3</td>
+                        <td class="px-6 py-3">{{ $item->kodemk }}</td>
+                        <td class="px-6 py-3">{{ $item->namamk }}</td>
+                        <td class="px-6 py-3">{{ $item->sks }}</td>
+                        <td class="px-6 py-3">{{ $item->nilai }}</td>
+                        <td class="px-6 py-3">{{ $item->sks }}</td>
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

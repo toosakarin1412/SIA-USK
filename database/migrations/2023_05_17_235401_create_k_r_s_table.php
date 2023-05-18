@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('k_r_s', function (Blueprint $table) {
             $table->string('user_id');
+            $table->string('nilai')->default('-');
             $table->string('kodemk');
             $table->timestamps();
         });

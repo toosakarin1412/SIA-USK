@@ -49,17 +49,12 @@ Route::middleware('auth')->group(function () {
         Route::get('/isi-krs', [KRSController::class, 'isiKRS'])->name('isi-krs');
         Route::post('/krs/add', [KRSController::class, 'addKRS'])->name('krs.add');
         
-        Route::get('/pkrs', function () {
-            return view('pkrs');
-        })->name('pkrs');
+        Route::get('/pkrs', [KRSController::class, 'pkrs'])->name('pkrs');
+        Route::post('/pkrs/delete/', [KRSController::class, 'deleteKRS'])->name('pkrs.delete');
         
-        Route::get('/khs', function () {
-            return view('khs');
-        })->name('khs');
+        Route::get('/khs', [KRSController::class, 'khs'])->name('khs');
         
-        Route::get('/mata-kuliah', function () {
-            return view('matakuliah');
-        })->name('mata-kuliah');
+        Route::get('/mata-kuliah', [KRSController::class, 'matakuliah'])->name('mata-kuliah');
         
         Route::get('/transkrip', function () {
             return view('transkrip');
