@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\KRS;
 use App\Models\MataKuliah;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 
 class KRSController extends Controller
@@ -65,17 +66,11 @@ class KRSController extends Controller
     }
 
     function khs(){
-        $data = KRS::where('user_id', Auth::user()->id)->get();
+        $data = DB::table('k_r_s')
+            ->join('mata_kuliahs', 'k_r_s.kodemk', '=', 'mata_kuliahs.kodemk')
+            ->where('user_id', Auth::user()->id)->get();
 
-        $dataKRS = [];
-
-        foreach ($data as $key) {
-            $tmp = MataKuliah::where('kodemk', $key->kodemk)->get();
-            
-            array_push($dataKRS, $tmp[0]);
-        }
-
-        return view('khs', ['data' => $dataKRS]);
+        return view('khs', ['data' => $data]);
     }
 
     function matakuliah(){
@@ -90,6 +85,17 @@ class KRSController extends Controller
         }
 
         return view('matakuliah', ['data' => $dataKRS]);
+    }
+
+    public function updateNilai(Request $request){
+        KRS::where([
+            ['user_id', '=', $request->user_id],
+            ['kodemk', '=', $request->kodemk]
+        ])->update([
+            'nilai' => $request->nilai,
+        ]);
+
+        return redirect()->back();
     }
 
     /**

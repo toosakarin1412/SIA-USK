@@ -1,0 +1,64 @@
+@extends('Layout.sidebarDosen')
+
+@section('content')
+    <div class="flex h-screen w-screen p-6 flex-col gap-10">
+        <div class="flex items-center bg-gray-200 h-fit w-full p-5 rounded-lg shadow-lg justify-between">
+            <h1 class=" text-base font-bold">
+                Perubahan Mata Kuliah
+            </h1>
+            <div
+                class="flex flex-row gap-2 items-center bg-emerald-300 w-32 justify-center h-10 rounded-lg hover:bg-emerald-200">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+                </svg>
+                <button class="text-base font-bold text-center">
+                    Refresh
+                </button>
+            </div>
+        </div>
+        <div class="bg-gray-200 rounded-lg shadow-lg p-5 overflow-x-scroll w-full md:overflow-x-visible">
+            <table class="table-fixed w-full">
+                <thead class="w-fit md:w-full">
+                    <tr class="bg-emerald-300">
+                        <th scope="col" class="px-6 py-3">
+                            NPM
+                        </th>
+                        <th scope="col" class="px-6 py-3 whitespace-nowrap">
+                            KodeMK
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Nilai
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            UpdateNilai
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="w-fit md:w-full text-center text-xs md:text-lg">
+                    @foreach($data as $item)
+                    <tr>
+                        <form action="/krs/updateNilai" method="post">
+                            <td class="px-6 py-3">{{$item->user_id}}</td>
+                            <td class="px-6 py-3">{{$item->kodemk}}</td>
+                            <td class="px-6 py-3">
+                                <input type="text" name="nilai" value="{{ $item->nilai }}">
+                            </td>
+                            <td class="px-6 py-3">                                
+                                @csrf
+                                <input type="hidden" name="kodemk" value="{{$item->kodemk}}">
+                                <input type="hidden" name="user_id" value="{{$item->user_id}}">
+                                <button type="submit"
+                                    class="text-base font-bold text-center bg-emerald-300 hover:bg-emerald-200 w-28 h-10 rounded-lg">
+                                    Update NIlai
+                                </button>
+                            </td>
+                        </form>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+    </div>
+@endsection

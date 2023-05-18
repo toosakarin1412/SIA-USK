@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\MataKuliahController;
 use App\Http\Controllers\KRSController;
+use App\Http\Controllers\Perwalian;
 
 /*
 |--------------------------------------------------------------------------
@@ -73,6 +74,9 @@ Route::middleware('auth')->group(function () {
         Route::get('/dosen', function () {
             return view('dashboardDosen');
         })->name('dashboardDosen');
+        Route::get('/dosen/krsmhs', [Perwalian::class, 'getKRS'])->name('krs.mhs');
+        Route::post('/krs/updateNilai', [KRSController::class, 'updateNilai'])->name('krs.update.nilai');
+        
     });
 
     Route::middleware('CheckRole:admin')->group(function () {
