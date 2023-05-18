@@ -68,16 +68,6 @@
                     </a>
                 </button>
                 <button class="hover:bg-emerald-600 text-left rounded-md p-2">
-                    <a href="{{ route('ijazah') }}">
-                        Ijazah
-                    </a>
-                </button>
-                <button class="hover:bg-emerald-600 text-left rounded-md p-2">
-                    <a href="{{ route('histori-nilai') }}">
-                        Histori Nilai
-                    </a>
-                </button>
-                <button class="hover:bg-emerald-600 text-left rounded-md p-2">
                     <a href="{{ route('dashboard') }}">
                         Back
                     </a>

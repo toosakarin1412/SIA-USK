@@ -52,16 +52,6 @@
                     </a>
                 </button>
                 <button class="hover:bg-emerald-600 text-left rounded-md p-2">
-                    <a href="{{ route('simkuliah') }}">
-                        E-Learning
-                    </a>
-                </button>
-                <button class="hover:bg-emerald-600 text-left rounded-md p-2">
-                    <a href="{{ route('biodata') }}">
-                        Setting
-                    </a>
-                </button>
-                <button class="hover:bg-emerald-600 text-left rounded-md p-2">
                     <a href="{{ route('Logout') }}">
                         Logout
                     </a>
