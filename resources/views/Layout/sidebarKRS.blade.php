@@ -63,11 +63,6 @@
                     </a>
                 </button>
                 <button class="hover:bg-emerald-600 text-left rounded-md p-2">
-                    <a href="{{ route('transkrip') }}">
-                        Transkrip
-                    </a>
-                </button>
-                <button class="hover:bg-emerald-600 text-left rounded-md p-2">
                     <a href="{{ route('dashboard') }}">
                         Back
                     </a>
