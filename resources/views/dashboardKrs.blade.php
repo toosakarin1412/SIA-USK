@@ -5,10 +5,10 @@
         <div class="flex flex-col gap-4 md:w-full md:h-full">
             <div>
                 <div class="w-full p-4 bg-gray-200 rounded-xl h-[20rem]">
-                    <h2 class="text-left font-bold text-xl">
+                    <h2 class="text-left font-semibold text-xl">
                         Informasi
                     </h2>
-                    <hr class="h-px md:my-2 w-full bg-gray-200 border-0 dark:bg-gray-700" color="black" />
+                    <hr class="h-px md:my-2 w-full bg-gray-500 border-0" />
                 </div>
             </div>
             <div class="bg-gray-200 rounded-lg shadow-lg p-5 w-full h-full md:overflow-x-visible">
@@ -48,10 +48,10 @@
         </div>
         <div class="md:w-[36rem] h-full">
             <div class="w-full h-full p-6 bg-gray-200 rounded-xl">
-                <h2 class="text-center text-xl font-bold">
+                <h2 class="text-center text-xl font-semibold">
                     Time Line Activity
                 </h2>
-                <hr class="h-px md:my-2 w-full bg-gray-200 border-0 dark:bg-gray-700" color="black" />
+                <hr class="h-px md:my-2 w-full bg-gray-500 border-0" />
             </div>
         </div>
     </div>

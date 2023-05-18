@@ -48,7 +48,7 @@
                 </tbody>
             </table>
         </div>
-        <button class="bg-emerald-300 hover:bg-emerald-400 text-white font-bold py-2 px-4 rounded-xl w-[10rem]">
+        <button class="bg-emerald-300 hover:bg-emerald-400 text-black font-bold py-2 px-4 rounded-xl w-[10rem]">
             Ajukan
         </button>
     </form>
