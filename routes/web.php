@@ -75,7 +75,9 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::middleware('CheckRole:dosen')->group(function () {
-
+        Route::get('/dosen', function () {
+            return view('dashboardDosen');
+        })->name('dashboardDosen');
     });
 
     Route::middleware('CheckRole:admin')->group(function () {

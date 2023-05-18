@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('npm')->unique();
+            $table->string('id_dosen_wali')->nullable();
             $table->string('name');
             $table->string('email');
             $table->enum('level', ['admin', 'mahasiswa', 'dosen'])->default('mahasiswa');
